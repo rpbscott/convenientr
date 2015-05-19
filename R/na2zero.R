@@ -5,6 +5,14 @@
 #' @param x a vector, matrix, data frame, a non-hierarchical list, 
 #' or a list of no more than 2 hierarchy levels (i.e. a list of lists)
 #' @return an object of the same type as x with any NA values set to 0.
+#' @examples
+#' na2zero(matrix(c(NA, 7, NA, 6), 2, 2))
+#' na2zero(c(NA, 6))
+#' na2zero(list(NA, 3))
+#' na2zero(list(NA, 3, list(4, NA)))
+#' 
+#' mtcars[1,3] <- NA
+#' na2zero(mtcars)
 
 na2zero <- function(x) {
   if (is.list(x) & sum(sapply(y, is.list)) > 0) {

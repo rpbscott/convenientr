@@ -2,7 +2,7 @@
 % Please edit documentation in R/na2zero.R
 \name{na2zero}
 \alias{na2zero}
-\title{A function that sets NA values to 0.}
+\title{A function that sets any existing object's NA values to 0.}
 \usage{
 na2zero(x)
 }
@@ -14,7 +14,16 @@ or a list of no more than 2 hierarchy levels (i.e. a list of lists)}
 an object of the same type as x with any NA values set to 0.
 }
 \description{
-This function takes a variety of inputs and resets any of the input's
+This function takes a variety of inputs and sets any of the input's
 NA values to 0.
+}
+\examples{
+na2zero(matrix(c(NA, 7, NA, 6), 2, 2))
+na2zero(c(NA, 6))
+na2zero(list(NA, 3))
+na2zero(list(NA, 3, list(4, NA)))
+
+mtcars[1,3] <- NA
+na2zero(mtcars)
 }
 
