@@ -15,7 +15,11 @@
 
 
 qmatrix <- function(n, p, a = 0, b = 2*p*n) {
-  elements <- sample(a:b, n*p)
+  if (n*p > (b-a)) {
+    elements <- sample(a:b, n*p, replace = TRUE)
+  } else {
+    elements <- sample(a:b, n*p, replace = FALSE)
+  }
   result <- matrix(elements, n, p)
   return(result)
 }
