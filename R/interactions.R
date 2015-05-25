@@ -33,9 +33,8 @@ interactions <- function(x) {
   # with sparse input, interactions are likely to be very sparse
   # send warnings if any interactions return a vector of constants
   if (sum(convenientr::num_unique_values(result) == 1)) {
-      warning("One of the columns of returned object is constant (has
-             n
-              only 1 unique value. ")
+      warning(cat("One of the columns of returned object is constant (has",
+              "only 1 unique value.)"))
     }
   return(result)
   }
