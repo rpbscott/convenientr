@@ -5,7 +5,7 @@ Authors@R: person("Rosemarie", "Scott", email = "rosie.scott@gmail.com", role = 
 Description: Currently contains functions commonly used when processing data or 
     fitting a machine learning model and assessing the fit. Functions varry in 
     simplicity. Examples include outputting a data structure with randomly generated
-    elements, setting NA components of a vector or matrix to 0, and assisting with 
+    elements, resetting NA components of a vector, matrix, dataframe, or list, and assisting with 
     fit, prediction, and model performance of penalized regressions.
 Depends: R (>= 3.1.2)
 LazyData: true
